@@ -13,15 +13,15 @@ jobs:
       - run: docker build -t cygnetops/react-test -f ./client/Dockerfile.dev ./client
       - run: docker run -e CI=true cygnetops/react-test npm test -- --coverage 
  
-      - run: docker build -t mrwizzard82/multi-client-10-14 ./client
-      - run: docker build -t mrwizzard82/multi-nginx-10-14 ./nginx
-      - run: docker build -t mrwizzard82/multi-server-10-14 ./server
-      - run: docker build -t mrwizzard82/multi-worker-10-14 ./worker
+      - run: docker build -t lindstob/multi-client-10-14 ./client
+      - run: docker build -t lindstob/multi-nginx-10-14 ./nginx
+      - run: docker build -t lindstob/multi-server-10-14 ./server
+      - run: docker build -t lindstob/multi-worker-10-14 ./worker
  
-      - run: docker push mrwizzard82/multi-client-10-14
-      - run: docker push mrwizzard82/multi-nginx-10-14
-      - run: docker push mrwizzard82/multi-server-10-14
-      - run: docker push mrwizzard82/multi-worker-10-14
+      - run: docker push lindstob/multi-client-10-14
+      - run: docker push lindstob/multi-nginx-10-14
+      - run: docker push lindstob/multi-server-10-14
+      - run: docker push lindstob/multi-worker-10-14
  
 #      - name: Generate deployment package
 #        run: zip -r deploy.zip . -x '*.git*'
